@@ -34,7 +34,12 @@
 #define Interrupt_MODE 0
 #define Thermistor 0
 
+#define LED_PIN 0x01
+#define LED_PORT PORTB
+#define LED_DDR DDRB
 
+#define LED_ON  LED_PORT |= LED_PIN
+#define LED_OFF LED_PORT &= ~(LED_PIN)
 
 
 
