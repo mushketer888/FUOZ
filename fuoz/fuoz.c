@@ -9,14 +9,19 @@
 
 #include "config.h"
 #include <util/delay.h>
-#define LED_ON PORTB |= 0x01
-#define LED_OFF PORTB &= ~(0x01)
+
+#define LED_PIN 0x01
+#define LED_PORT PORTB
+#define LED_DDR DDRB
+
+#define LED_ON  LED_PORT |= LED_PIN
+#define LED_OFF LED_PORT &= ~(LED_PIN)
 
 
 int main(void)
 {
 	fuoz_init();
-	DDRB |= 1<<0;	
+	LED_DDR |= LED_PIN;	
 	
     while(1)
     {
