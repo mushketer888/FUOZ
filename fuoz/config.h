@@ -32,7 +32,7 @@
 	5 - Comparator interrupt on falling (not used)
 */
 #define Interrupt_MODE 0
-#define Thermistor 0
+#define Thermistor 0 // 1-Thermistor
 
 
 
